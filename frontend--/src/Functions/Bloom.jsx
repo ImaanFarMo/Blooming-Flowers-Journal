@@ -20,7 +20,7 @@ export default function Bloom({ day, animation, picture, dates, onReflectionAdde
 
         const timer = setTimeout(() => {
             setShowPicture(true);
-        }, 1300);
+        }, 1800); //1300
 
         return () => clearTimeout(timer);
     }, [isCompleted]);
