@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express')
 const mongoose = require('mongoose');
 const User = require('./models/user.model.js');
@@ -26,7 +27,7 @@ app.get('/', (req, res) => {
 });
 
 
-mongoose.connect("mongodb+srv://imaanstarjaffer_db_user:Cutyprincess_14@usersramadan.o96qi8q.mongodb.net/Users?appName=UsersRamadan")
+mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log("Connected to database!");
 })
