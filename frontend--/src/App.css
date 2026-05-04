@@ -1,0 +1,215 @@
+body {
+    background: linear-gradient(to bottom, #fff7e6, #f2e6d9);
+}
+
+.Heading {
+    text-align: center;
+    font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+    color: #342004;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Welcome (comes first) */
+.welcome-text {
+    font-size: 40px;
+    opacity: 0;
+    transform: translateY(15px);
+
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 1.3s; /* after flowers */
+}
+
+/* Name (comes after) */
+.name-text {
+    font-size: 140px;
+    font-weight: 500;
+    
+    text-shadow: 0 0 10px rgba(52, 32, 4, 0.2);
+    
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+
+    animation: fadeUpBig 1s ease forwards;
+    animation-delay: 1.8s;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUpBig {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateY(-50px);
+  }
+
+  90% {
+    transform: translateY(0);
+  }
+
+  95% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.bloom-box {
+  width: 70px;
+  height: 650px;
+  display: flex;
+  align-items: flex-end;     /* 🔥 push content to bottom */
+  justify-content: center;
+}
+
+.empty-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #50330b;
+  color:#fff7e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+
+}
+
+.animation,
+.picture {
+  width: auto;
+  height: 100%; 
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;   /* center the whole row */
+  align-items: flex-end;     /* 🌱 THIS makes them grow from bottom */
+  gap: 5px;                  /* small spacing between flowers */
+  height: 650px;             /* gives a "ground level" */
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.25); /* 🔥 25% translucent */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reflection-input {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+
+  padding: 15px;
+  border-radius: 10px;
+
+  font-size: 16px;
+  resize: none;
+}
+
+.popup-content {
+  width: 75%;
+  height: 75%;
+
+  background: rgba(255, 247, 230, 0.95); 
+  backdrop-filter: blur(6px); 
+
+  border-radius: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* base button style */
+.popup-buttons button {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+/* cancel button */
+.popup-buttons button:first-child {
+  background-color: #e6d5c3;
+  color: #3b2a1a;
+}
+
+/* save button */
+.popup-buttons button:last-child {
+  background-color: #3b2a1a;
+  color: #fff7e6;
+}
+
+/* hover effects */
+.popup-buttons button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* click effect */
+.popup-buttons button:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.popup-content {
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
