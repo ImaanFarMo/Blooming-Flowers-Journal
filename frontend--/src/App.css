@@ -213,3 +213,146 @@ body {
   }
 }
 
+
+
+
+/* =========================
+   PAGE BACKGROUND (GARDEN)
+========================= */
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 220, 230, 0.35), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(80, 51, 11, 0.15), transparent 55%),
+    linear-gradient(to bottom, #fff7e6, #f2e6d9);
+}
+
+/* soft floating flower */
+.login-flower {
+  position: absolute;
+  width: 950px;
+  bottom: -40px;
+  right: 750px;
+}
+
+/* =========================
+   LOGIN CARD (storybook page)
+========================= */
+.login-card {
+  position: relative;
+  z-index: 2;
+
+  width: 450px;
+  padding: 35px;
+
+  background: rgba(255, 250, 235, 0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.15),
+    inset 0 0 40px rgba(255,255,255,0.4);
+
+  animation: floatPage 1s ease;
+}
+
+/* floating entrance */
+@keyframes floatPage {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   TITLE
+========================= */
+.login-title {
+  font-family: "Brush Script MT", cursive;
+  font-size: 70px;
+  color: #3b2a1a;
+  text-align: center;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   INPUTS (journal lines)
+========================= */
+.login-input {
+  padding: 14px 16px;
+  border: none;
+  border-bottom: 2px solid rgba(80, 51, 11, 0.2);
+
+  background: transparent;
+  outline: none;
+
+  font-size: 16px;
+  font-family: inherit;
+
+  transition: all 0.2s ease;
+}
+
+.login-input:focus {
+  border-bottom: 2px solid #50330b;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   BUTTON (portal entry)
+========================= */
+.login-button {
+  margin-top: 10px;
+
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #50330b, #7a4d22);
+  color: #fff7e6;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  transition: all 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+.login-title {
+  letter-spacing: 1px;
+}
+
+.login-card {
+  animation: floatPage 0.8s ease;
+}
+
+.signup-mode .login-title {
+  color: #4a2f1c;
+}
+
+.signup-flower {
+  position: absolute;
+  width: 750px;
+  bottom: -40px;
+  right: 850px;
+}

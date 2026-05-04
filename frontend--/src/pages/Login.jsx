@@ -1,7 +1,7 @@
 //Needed to use React
 //Use state is to store data 
 import React, {useState} from 'react';
-
+import "../App.css";
 //Used to make requests to backend
 import axios from 'axios';
 
@@ -34,28 +34,51 @@ function Login(){
         }
     }; 
 
-    return(
-        <div>
-            <h2>Login</h2>
+    return (
+  <div className="login-page">
 
-            <input
-                placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-            />
-            <br /><br />
+    <div className="login-card"> 
+      <h2 className="login-title">Welcome Back</h2>
 
-            <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            />
-            <br /><br />
+      <input
+        className="login-input"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
 
-            <button onClick={handleLogin}>Login</button>
-        </div>
-    );
+      <input
+        className="login-input"
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button className="login-button" onClick={handleLogin}>
+        Login
+      </button>
+
+      <p style={{ textAlign: "center", marginTop: "10px", fontSize: "14px" }}>
+    New here?{" "}
+    <span
+        style={{ cursor: "pointer", textDecoration: "underline" }}
+        onClick={() => navigate("/signup")}
+    >
+        Create account
+    </span>
+</p>
+    </div>
+
+    {/* decorative flower */}
+    <img
+      src="/src/assets/Image-1.PNG"
+      alt="flower"
+      className="login-flower"
+    />
+
+  </div>
+);
 }
 
 export default Login;
