@@ -16,7 +16,7 @@ function Login(){
     const handleLogin = async () => {
         try {
             const res = await axios.post(
-                "http://localhost:3000/api/users/login",
+                "https://blooming-flowers-journal.onrender.com/api/users/login",
                 {name, password}
             );
 

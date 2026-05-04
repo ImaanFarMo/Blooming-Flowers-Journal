@@ -46,7 +46,7 @@ export default function Bloom({ day, animation, picture, dates, onReflectionAdde
             content: reflectionText
         });
 
-        await axios.post("http://localhost:3000/api/reflections", {
+        await axios.post("https://blooming-flowers-journal.onrender.com/api/reflections", {
             userId: user._id,
             day: Number(day), 
             content: reflectionText.trim()

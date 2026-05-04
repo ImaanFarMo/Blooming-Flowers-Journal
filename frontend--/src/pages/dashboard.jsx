@@ -58,7 +58,7 @@ export default function Dashboard() {
     
     const findDays = async () => {
         try {
-            const res = await axios.get("http://localhost:3000/api/reflections");
+            const res = await axios.get("https://blooming-flowers-journal.onrender.com/api/reflections");
 
             const userReflections = res.data.filter(
                 (r) =>

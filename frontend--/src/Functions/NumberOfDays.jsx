@@ -13,7 +13,7 @@ export function NumberOfDays() {
     const findDays = async () => {
         try {
             const res = await axios.get(
-                "http://localhost:3000/api/reflections"
+                "https://blooming-flowers-journal.onrender.com/api/reflections"
             );
 
             // reflections for this user
