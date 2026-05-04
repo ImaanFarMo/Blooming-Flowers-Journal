@@ -65,7 +65,7 @@ function Signup() {
     Already have a garden?{" "}
     <span
         style={{ cursor: "pointer", textDecoration: "underline" }}
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/Login")}
     >
         Log in
     </span>
